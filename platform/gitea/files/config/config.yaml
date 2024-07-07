@@ -17,7 +17,7 @@ repositories:
     private: false
     migrate:
       source: https://github.com/anhtung19x9/homelab
-      mirror: false
+      mirror: true
   - name: blog
     owner: khuedoan
     migrate:
