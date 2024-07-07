@@ -140,15 +140,6 @@ app-template:
               - href: https://dash.cloudflare.com
                 icon: cloudflare.svg
           - Infrastructure:
-            - Router:
-              - href: https://192.168.1.1
+            - pfSense:
+              - href: https://10.17.0.1:8443
                 icon: router.svg
-            - Proxmox:
-              - href: https://proxmox:8006
-                icon: proxmox.svg
-            - Google Cloud:
-              - href: https://console.cloud.google.com
-                icon: google-cloud-platform.svg
-            - Oracle Cloud:
-              - href: https://cloud.oracle.com
-                icon: oracle-cloud.svg
