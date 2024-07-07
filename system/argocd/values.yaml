@@ -55,8 +55,8 @@ argocd-apps:
             targetRevision: *revision
           syncPolicy:
             automated:
-              prune: false
-              selfHeal: false
+              prune: true
+              selfHeal: true
             retry:
               limit: 10
               backoff:
