@@ -2,8 +2,8 @@ ingress-nginx:
   controller:
     admissionWebhooks:
       timeoutSeconds: 30
-      annotations:
-        argocd.argoproj.io/hook: PostSync
+#      annotations:
+#        argocd.argoproj.io/hook: PostSync
     metrics:
       enabled: true
       serviceMonitor:
