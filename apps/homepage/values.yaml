@@ -133,7 +133,7 @@ app-template:
               - href: https://homelab.vmogroup.online
                 icon: google-docs.svg
             - Public homelab repository:
-              - href: https://github.com/khuedoan/homelab
+              - href: https://github.com/anhtung19x9/homelab
                 icon: github.svg
           - Managed services:
             - Cloudflare:
