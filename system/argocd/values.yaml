@@ -35,7 +35,7 @@ argocd-apps:
       namespace: argocd
       generators:
         - git:
-            repoURL: &repoURL http://github.com/anhtung19x9/homelab
+            repoURL: &repoURL https://github.com/anhtung19x9/homelab
             revision: &revision master
             directories:
               - path: system/*
