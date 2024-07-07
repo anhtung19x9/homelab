@@ -252,5 +252,7 @@ def main() -> None:
         for app in kanidm_oauth_apps:
             setup_kanidm_oauth_app(app['name'], app['redirect_uri'])
 
+        print("done all step")
+
 if __name__ == '__main__':
     main()
