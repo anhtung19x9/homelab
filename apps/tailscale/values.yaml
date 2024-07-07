@@ -19,6 +19,7 @@ app-template:
                   name: tailscale-auth
                   key: TS_AUTHKEY
           securityContext:
+            privileged: true
             capabilities:
               add:
                 - NET_ADMIN
