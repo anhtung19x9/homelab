@@ -139,9 +139,6 @@ app-template:
             - Cloudflare:
               - href: https://dash.cloudflare.com
                 icon: cloudflare.svg
-            - Terraform Cloud:
-              - href: https://app.terraform.io
-                icon: terraform.svg
           - Infrastructure:
             - Router:
               - href: https://192.168.1.1
