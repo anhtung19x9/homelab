@@ -161,7 +161,7 @@ def kanidm_login(accounts: list[str]) -> None:
         # https://stackoverflow.com/questions/2387731/use-subprocess-to-send-a-password
         cli_login = pexpect.spawn(f"kanidm login --url https://{kanidm_host} --name {account}")
         cli_login.sendline(password)
-        cli_login.read()
+        print(cli_login.read())
 
 def setup_kanidm_group(name: str) -> None:
     subprocess.run(
