@@ -49,7 +49,7 @@ app-template:
       enabled: true
       data:
         settings.yaml: |
-          background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+          background: https://image-0.uhdpaper.com/wallpaper/windows-11-365-background-4k-wallpaper-uhdpaper.com-142@0@h.jpg
           cardBlur: md
           theme: dark
           headerStyle: boxed
@@ -64,35 +64,7 @@ app-template:
                 href: https://chat.vmogroup.online
                 description: Chat client
                 icon: element.svg
-            - Jellyfin:
-                href: https://jellyfin.vmogroup.online
-                description: Media system (movies, music, etc.)
-                icon: jellyfin.svg
-            - Jellyseerr:
-                href: https://jellyseerr.vmogroup.online
-                description: Request media
-                icon: jellyseerr.svg
-            - Paperless:
-                href: https://paperless.vmogroup.online
-                description: Document management system
-                icon: paperless.svg
           - Management:
-            - Transmission:
-                href: https://transmission.vmogroup.online
-                description: Bittorrent client
-                icon: transmission.svg
-            - Prowlarr:
-                href: https://prowlarr.vmogroup.online
-                description: Indexer manager
-                icon: prowlarr.svg
-            - Radarr:
-                href: https://radarr.vmogroup.online
-                description: Movie manager
-                icon: radarr.svg
-            - Sonarr:
-                href: https://sonarr.vmogroup.online
-                description: TV show manager
-                icon: sonarr.svg
             - Kanidm:
                 href: https://auth.vmogroup.online
                 description: Identity management
