@@ -156,6 +156,7 @@ def reset_kanidm_account_password(account: str) -> str:
 def kanidm_login(accounts: list[str]) -> None:
     for account in accounts:
         password = reset_kanidm_account_password(account)
+        print(f"password kanidm {account}: {password}")
 
         # There's no way to input password using the standard library, so we have to use pexpect
         # https://stackoverflow.com/questions/2387731/use-subprocess-to-send-a-password
@@ -176,8 +177,9 @@ def setup_kanidm_oauth_app(name: str, redirect_uri: str) -> None:
             capture_output=True,
             check=True,
         )
+        print(f"Done create oauth app {name} ({redirect_uri})")
     except subprocess.CalledProcessError:
-        return
+        print(f"Error creating oauth app {name} ({redirect_uri})")
 
     # TODO https://github.com/dexidp/dex/pull/3188
     subprocess.run(
@@ -185,6 +187,7 @@ def setup_kanidm_oauth_app(name: str, redirect_uri: str) -> None:
         capture_output=True,
         check=True,
     )
+    print(f"Done warning-insecure-client-disable-pkce")
 
     subprocess.run(
         # TODO better group management
@@ -192,12 +195,14 @@ def setup_kanidm_oauth_app(name: str, redirect_uri: str) -> None:
         capture_output=True,
         check=True,
     )
+    print("Done create scope-map")
 
     client_secret = json.loads(subprocess.run(
         ["kanidm", "system", "oauth2", "show-basic-secret", "--url", f"https://{kanidm_host}", "--name", "admin", "--output", "json", name],
         capture_output=True,
         check=True,
     ).stdout.decode("utf-8"))['secret']
+    print("Done show basic secrets")
 
     apply_secret(
         f"kanidm.{name}",
@@ -207,6 +212,7 @@ def setup_kanidm_oauth_app(name: str, redirect_uri: str) -> None:
             'client_secret': base64.b64encode(client_secret.encode("utf-8")).decode("utf-8"),
         }
     )
+    print(f'String and argument: kanidm.{name}')
 
 def main() -> None:
     with Console().status("Completing the remaining sorcery"):
@@ -250,6 +256,7 @@ def main() -> None:
             setup_kanidm_group(group['name'])
 
         for app in kanidm_oauth_apps:
+            print("setup kanidm oauth app")
             setup_kanidm_oauth_app(app['name'], app['redirect_uri'])
 
         print("done all step")
