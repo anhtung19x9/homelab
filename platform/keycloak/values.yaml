@@ -628,7 +628,7 @@ keycloak:
     controller: default
     ## @param ingress.hostname Default host for the ingress record (evaluated as template)
     ##
-    hostname: keycloak.vmogroup.online
+    hostname: keycloak.techpolice.online
     ## @param ingress.hostnameStrict Disables dynamically resolving the hostname from request headers.
     ## Should always be set to true in production, unless your reverse proxy overwrites the Host header.
     ## If enabled, the hostname option needs to be specified.
@@ -746,7 +746,7 @@ keycloak:
     controller: default
     ## @param adminIngress.hostname Default host for the admin ingress record (evaluated as template)
     ##
-    hostname: admin.keycloak.vmogroup.online
+    hostname: admin.keycloak.techpolice.online
     ## @param adminIngress.path [string] Default path for the admin ingress record (evaluated as template)
     ##
     path: "{{ .Values.httpRelativePath }}"

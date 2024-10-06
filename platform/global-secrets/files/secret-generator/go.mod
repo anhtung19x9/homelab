@@ -1,4 +1,4 @@
-module git.vmogroup.online/tungta/homelab/platform/secret-generator
+module git.techpolice.online/tungta/homelab/platform/secret-generator
 
 go 1.19
 

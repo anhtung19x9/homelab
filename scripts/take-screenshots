@@ -19,19 +19,19 @@ apps = [
     },
     {
         'name': 'gitea',
-        'url': 'https://git.vmogroup.online/ops/homelab'
+        'url': 'https://git.techpolice.online/ops/homelab'
     },
     {
         'name': 'argocd',
-        'url': 'https://argocd.vmogroup.online/applications/root'
+        'url': 'https://argocd.techpolice.online/applications/root'
     },
     {
         'name': 'matrix',
-        'url': 'https://chat.vmogroup.online/#/room/#random:matrix.vmogroup.online'
+        'url': 'https://chat.techpolice.online/#/room/#random:matrix.techpolice.online'
     },
     {
         'name': 'grafana',
-        'url': 'https://grafana.vmogroup.online/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster'  # wtf is this ID
+        'url': 'https://grafana.techpolice.online/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster'  # wtf is this ID
     },
 ]
 

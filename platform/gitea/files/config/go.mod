@@ -1,4 +1,4 @@
-module git.vmogroup.online/tungta/homelab/gitea/config
+module git.techpolice.online/tungta/homelab/gitea/config
 
 go 1.19
 

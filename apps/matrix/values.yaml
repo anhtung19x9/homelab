@@ -4,10 +4,10 @@ elementweb:
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      external-dns.alpha.kubernetes.io/target: "homelab-tunnel.vmogroup.online"
+      external-dns.alpha.kubernetes.io/target: "homelab-tunnel.techpolice.online"
       external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
     hosts:
-      - host: &frontend_host chat.vmogroup.online
+      - host: &frontend_host chat.techpolice.online
         paths:
           - path: /
             pathType: Prefix
@@ -17,22 +17,22 @@ elementweb:
           - *frontend_host
   config:
     default:
-      base_url: https://matrix.vmogroup.online
-      server_name: vmogroup.online
+      base_url: https://matrix.techpolice.online
+      server_name: techpolice.online
 
 dendrite:
   dendrite_config:
     global:
-      server_name: matrix.vmogroup.online
+      server_name: matrix.techpolice.online
   ingress:
     enabled: true
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-    hostName: matrix.vmogroup.online
+    hostName: matrix.techpolice.online
     tls:
       - hosts:
-          - matrix.vmogroup.online
+          - matrix.techpolice.online
         secretName: matrix-tls-certificate
   postgresql:
     enabled: true

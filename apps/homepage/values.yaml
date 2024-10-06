@@ -19,7 +19,7 @@ app-template:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
-        - host: &host home.vmogroup.online
+        - host: &host home.techpolice.online
           paths:
             - path: /
               pathType: Prefix
@@ -61,48 +61,48 @@ app-template:
         services.yaml: |
           - Popular:
             - Matrix:
-                href: https://chat.vmogroup.online
+                href: https://chat.techpolice.online
                 description: Chat client
                 icon: element.svg
           - Management:
             - Kanidm:
-                href: https://auth.vmogroup.online
+                href: https://auth.techpolice.online
                 description: Identity management
-                icon: https://auth.vmogroup.online/pkg/img/logo-square.svg
+                icon: https://auth.techpolice.online/pkg/img/logo-square.svg
           - Development:
             - Gitea:
-                href: https://git.vmogroup.online
+                href: https://git.techpolice.online
                 description: Git forge
                 icon: gitea.svg
             - Woodpecker:
-                href: https://ci.vmogroup.online
+                href: https://ci.techpolice.online
                 description: Continuous integration
                 icon: woodpecker-ci.svg
             - ArgoCD:
-                href: https://argocd.vmogroup.online
+                href: https://argocd.techpolice.online
                 description: Continuous deployment
                 icon: argocd.svg
             - Registry:
-                href: https://registry.vmogroup.online
+                href: https://registry.techpolice.online
                 description: Container registry
                 icon: docker.svg
             - Grafana:
-                href: https://grafana.vmogroup.online
+                href: https://grafana.techpolice.online
                 description: Observability dashboards
                 icon: grafana.svg
           - Utilities:
             - Excalidraw:
-                href: https://draw.vmogroup.online
+                href: https://draw.techpolice.online
                 description: Virtual whiteboard
                 icon: excalidraw.svg
             - Speedtest:
-                href: https://speedtest.vmogroup.online
+                href: https://speedtest.techpolice.online
                 description: Internal network speed test
                 icon: openspeedtest.png
         bookmarks.yaml: |
           - Homelab:
             - Documentation:
-              - href: https://homelab.vmogroup.online
+              - href: https://homelab.techpolice.online
                 icon: google-docs.svg
             - Public homelab repository:
               - href: https://github.com/anhtung19x9/homelab

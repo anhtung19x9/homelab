@@ -1,5 +1,5 @@
 data "cloudflare_zone" "zone" {
-  name = "vmogroup.online"
+  name = "techpolice.online"
 }
 
 data "cloudflare_api_token_permission_groups" "all" {}
