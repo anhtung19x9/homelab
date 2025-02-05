@@ -21,7 +21,7 @@ from kubernetes.stream import stream
 # https://git.khuedoan.com/user/settings/applications
 # Doing this properly inside the cluster requires:
 # - Kubernetes service account
-config.load_config(kube_config_path='./metal/kubeconfig.yaml')
+config.load_config(kube_config_path='../metal/kubeconfig.yaml')
 
 gitea_host = client.NetworkingV1Api().read_namespaced_ingress('gitea', 'gitea').spec.rules[0].host
 gitea_user_secret = client.CoreV1Api().read_namespaced_secret('gitea-admin-secret', 'gitea')
@@ -161,8 +161,10 @@ def kanidm_login(accounts: list[str]) -> None:
         # There's no way to input password using the standard library, so we have to use pexpect
         # https://stackoverflow.com/questions/2387731/use-subprocess-to-send-a-password
         cli_login = pexpect.spawn(f"kanidm login --url https://{kanidm_host} --name {account}")
+        cli_login.expect("Enter password:")
         cli_login.sendline(password)
-        print(cli_login.read())
+        cli_output = cli_login.read().decode("utf-8")
+        print(cli_output)
 
 def setup_kanidm_group(name: str) -> None:
     subprocess.run(
