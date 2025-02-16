@@ -22,8 +22,9 @@ app-template:
           no-autoupdate: true
           ingress:
             - hostname: '*.techpolice.online'
-              service: https://ingress-nginx-controller.ingress-nginx
+              service: tcp://ingress-nginx-controller.ingress-nginx:443
               originRequest:
+                proxyType: socks
                 noTLSVerify: true
             - service: http_status:404
   persistence:
