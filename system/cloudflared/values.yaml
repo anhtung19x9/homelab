@@ -21,6 +21,11 @@ app-template:
           metrics: 0.0.0.0:2000
           no-autoupdate: true
           ingress:
+            - hostname: 'kubernetes.techpolice.online'
+              service: tcp://kubernetes.default.svc:443
+              originRequest:
+                proxyType: socks
+                noTLSVerify: true
             - hostname: '*.techpolice.online'
               service: https://ingress-nginx-controller.ingress-nginx
               originRequest:
