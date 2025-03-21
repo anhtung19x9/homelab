@@ -18,10 +18,10 @@ app-template:
       className: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
-        external-dns.alpha.kubernetes.io/target: homelab-tunnel.techpolice.online
+        external-dns.alpha.kubernetes.io/target: homelab-tunnel.19ninety-three.com
         external-dns.alpha.kubernetes.io/cloudflare-proxied: 'true'
       hosts:
-        - host: &host home.techpolice.online
+        - host: &host home.19ninety-three.com
           paths:
             - path: /
               pathType: Prefix
@@ -63,48 +63,48 @@ app-template:
         services.yaml: |
           - Popular:
             - Matrix:
-                href: https://chat.techpolice.online
+                href: https://chat.19ninety-three.com
                 description: Chat client
                 icon: element.svg
           - Management:
             - Kanidm:
-                href: https://auth.techpolice.online
+                href: https://auth.19ninety-three.com
                 description: Identity management
-                icon: https://auth.techpolice.online/pkg/img/logo-square.svg
+                icon: https://auth.19ninety-three.com/pkg/img/logo-square.svg
           - Development:
             - Gitea:
-                href: https://git.techpolice.online
+                href: https://git.19ninety-three.com
                 description: Git forge
                 icon: gitea.svg
             - Woodpecker:
-                href: https://ci.techpolice.online
+                href: https://ci.19ninety-three.com
                 description: Continuous integration
                 icon: woodpecker-ci.svg
             - ArgoCD:
-                href: https://argocd.techpolice.online
+                href: https://argocd.19ninety-three.com
                 description: Continuous deployment
                 icon: argocd.svg
             - Registry:
-                href: https://registry.techpolice.online
+                href: https://registry.19ninety-three.com
                 description: Container registry
                 icon: docker.svg
             - Grafana:
-                href: https://grafana.techpolice.online
+                href: https://grafana.19ninety-three.com
                 description: Observability dashboards
                 icon: grafana.svg
           - Utilities:
             - Excalidraw:
-                href: https://draw.techpolice.online
+                href: https://draw.19ninety-three.com
                 description: Virtual whiteboard
                 icon: excalidraw.svg
             - Speedtest:
-                href: https://speedtest.techpolice.online
+                href: https://speedtest.19ninety-three.com
                 description: Internal network speed test
                 icon: openspeedtest.png
         bookmarks.yaml: |
           - Homelab:
             - Documentation:
-              - href: https://homelab.techpolice.online
+              - href: https://homelab.19ninety-three.com
                 icon: google-docs.svg
             - Public homelab repository:
               - href: https://github.com/anhtung19x9/homelab

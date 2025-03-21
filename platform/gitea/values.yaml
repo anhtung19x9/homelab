@@ -4,10 +4,10 @@ gitea:
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      external-dns.alpha.kubernetes.io/target: homelab-tunnel.techpolice.online
+      external-dns.alpha.kubernetes.io/target: homelab-tunnel.19ninety-three.com
       external-dns.alpha.kubernetes.io/cloudflare-proxied: 'true'
     hosts:
-      - host: &host git.techpolice.online
+      - host: &host git.19ninety-three.com
         paths:
           - path: /
             pathType: Prefix
@@ -21,7 +21,7 @@ gitea:
     config:
       server:
         LANDING_PAGE: explore
-        ROOT_URL: https://git.techpolice.online
+        ROOT_URL: https://git.19ninety-three.com
         OFFLINE_MODE: true
       repository:
         DISABLED_REPO_UNITS: repo.wiki,repo.projects,repo.packages

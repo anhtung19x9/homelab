@@ -20,7 +20,7 @@ app-template:
         nginx.ingress.kubernetes.io/proxy-body-size: 50m
         cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
-        - host: &host speedtest.techpolice.online
+        - host: &host speedtest.19ninety-three.com
           paths:
             - path: /
               pathType: Prefix

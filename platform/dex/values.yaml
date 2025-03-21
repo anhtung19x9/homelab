@@ -1,6 +1,6 @@
 dex:
   config:
-    issuer: https://dex.techpolice.online
+    issuer: https://dex.19ninety-three.com
     storage:
       type: kubernetes
       config:
@@ -14,8 +14,8 @@ dex:
         config:
           clientID: $KANIDM_CLIENT_ID
           clientSecret: $KANIDM_CLIENT_SECRET
-          redirectURI: https://dex.techpolice.online/callback
-          issuer: https://auth.techpolice.online/oauth2/openid/dex
+          redirectURI: https://dex.19ninety-three.com/callback
+          issuer: https://auth.19ninety-three.com/oauth2/openid/dex
           # TODO https://github.com/dexidp/dex/pull/3188
           # enablePKCE: true
           scopes:
@@ -27,12 +27,12 @@ dex:
       - id: grafana-sso
         name: Grafana
         redirectURIs:
-          - 'https://grafana.techpolice.online/login/generic_oauth'
+          - 'https://grafana.19ninety-three.com/login/generic_oauth'
         secretEnv: GRAFANA_SSO_CLIENT_SECRET
       - id: gitea
         name: Gitea
         redirectURIs:
-          - 'https://git.techpolice.online/user/oauth2/Dex/callback'
+          - 'https://git.19ninety-three.com/user/oauth2/Dex/callback'
         secretEnv: GITEA_CLIENT_SECRET
   envFrom:
     - secretRef:
@@ -42,10 +42,10 @@ dex:
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      external-dns.alpha.kubernetes.io/target: homelab-tunnel.techpolice.online
+      external-dns.alpha.kubernetes.io/target: homelab-tunnel.19ninety-three.com
       external-dns.alpha.kubernetes.io/cloudflare-proxied: 'true'
     hosts:
-      - host: &host dex.techpolice.online
+      - host: &host dex.19ninety-three.com
         paths:
           - path: /
             pathType: ImplementationSpecific

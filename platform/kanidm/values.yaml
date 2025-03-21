@@ -25,8 +25,8 @@ app-template:
           db_path = "/data/kanidm.db"
           tls_chain = "/data/ca.crt"
           tls_key = "/data/tls.key"
-          domain = "auth.techpolice.online"
-          origin = "https://auth.techpolice.online"
+          domain = "auth.19ninety-three.com"
+          origin = "https://auth.19ninety-three.com"
           log_level = "trace"
   service:
     main:
@@ -46,10 +46,10 @@ app-template:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         nginx.ingress.kubernetes.io/backend-protocol: HTTPS
-        external-dns.alpha.kubernetes.io/target: homelab-tunnel.techpolice.online
+        external-dns.alpha.kubernetes.io/target: homelab-tunnel.19ninety-three.com
         external-dns.alpha.kubernetes.io/cloudflare-proxied: 'true'
       hosts:
-        - host: &host auth.techpolice.online
+        - host: &host auth.19ninety-three.com
           paths:
             - path: /
               pathType: Prefix

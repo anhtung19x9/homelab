@@ -1,5 +1,5 @@
 data "cloudflare_zone" "zone" {
-  name = "techpolice.online"
+  name = "19ninety-three.com"
 }
 
 data "cloudflare_api_token_permission_groups" "all" {}

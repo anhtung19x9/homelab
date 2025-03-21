@@ -18,10 +18,10 @@ app-template:
       className: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
-#        external-dns.alpha.kubernetes.io/target: homelab-tunnel.techpolice.online
+#        external-dns.alpha.kubernetes.io/target: homelab-tunnel.19ninety-three.com
 #        external-dns.alpha.kubernetes.io/cloudflare-proxied: 'true'
       hosts:
-        - host: &host draw.techpolice.online
+        - host: &host draw.19ninety-three.com
           paths:
             - path: /
               pathType: Prefix
